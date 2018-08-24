@@ -28,6 +28,8 @@ export interface Win32Fns {
 
   HeapFree(hHeap: M.HANDLE, dwFlags: M.DWORD, lpMem: M.LPVOID | null): M.BOOL
 
+  OutputDebugString(lpMessage: M.LPCTSTR): M.VOID
+
   OpenProcess(dwDesiredAccess: M.DWORD, bInheritHandle: M.BOOL, dwProcessId: M.DWORD): M.HANDLE
 
   /** https://msdn.microsoft.com/en-us/library/windows/desktop/ms681381(v=vs.85).aspx */
